@@ -98,13 +98,19 @@
 <script>
     // select all checkboxes to listen for when they get checked
     const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
-    
+
     // this will be reassign constantly
     let lastChecked;
 
     // run this function after someone clicks
     function handleCheck(e) {
-        console.log(e);
+        // check if they had the shift key down
+        // AND when uncheck, it will trigger handleCheck
+        if(e.shiftKey) {
+
+        }
+
+        lastChecked = this;
     }
 
     // listen for when gets clicked/changed

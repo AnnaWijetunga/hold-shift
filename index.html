@@ -106,10 +106,18 @@
     function handleCheck(e) {
         // check if they had the shift key down
         // AND when uncheck, it will trigger handleCheck
+        let inBetween = false;
         if (e.shiftKey && this.checked) {
             // do what we please
             // loop through each check box but look for the first one checked, then go to the next, check, check, oh you're the last, stop
-            
+            checkboxes.forEach(checkbox => {
+                // now it's selecting all, but we need to show it
+                console.log(checkbox);
+                if(checkbox === this || checkbox === lastChecked) {
+                    // setting inBetween to the opposite of itself
+                    inBetween = !inBetween;
+                }
+            })
         }
 
         lastChecked = this;

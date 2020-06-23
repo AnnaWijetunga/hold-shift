@@ -98,6 +98,9 @@
 <script>
     // select all checkboxes to listen for when they get checked
     const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+    
+    // this will be reassign constantly
+    let lastChecked;
 
     // run this function after someone clicks
     function handleCheck(e) {
@@ -107,9 +110,6 @@
     // listen for when gets clicked/changed
     // loop over each, listen for click, and run handleCheck
     checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
-
-
-
 
 </script>
 </body>
